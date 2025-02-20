@@ -72,18 +72,10 @@
             text-shadow: 1px 1px 3px #000000;
             margin-top: 10px;
         }
-        #levelImageContainer {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
         #levelImage {
+            margin-top: 20px;
             max-width: 200px;
             display: none;
-            border: 3px solid #00ffcc;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #00ffcc;
         }
     </style>
 </head>
@@ -95,9 +87,7 @@
     <p>Arrastra cada orden de misión a su área correcta en la estación espacial.</p>
     <div id="score">Puntos de Eficiencia: <span id="scoreValue">0</span></div>
     <div id="scoreMessage">Nivel: Cadete</div>
-    <div id="levelImageContainer">
-        <img id="levelImage" src="" alt="Nivel de Eficiencia">
-    </div>
+    <img id="levelImage" src="" alt="Nivel de Eficiencia">
     
     <div class="game-container">
         <div class="category" id="seiri" ondrop="drop(event, 'obj1')" ondragover="allowDrop(event)">
@@ -191,7 +181,7 @@
                 image = 'director.png';
             }
 
-            scoreMessage.textContent = Nivel: ${level};
+            scoreMessage.textContent = `Nivel: ${level}`;
             levelImage.src = image;
             levelImage.style.display = 'block';
         }
